@@ -11,3 +11,4 @@ C:\Users\Акмарал\Desktop\Practice\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM
 C:\Users\Акмарал\Desktop\Practice\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.exe
 C:\Users\Акмарал\Desktop\Practice\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.xml
 C:\Users\Акмарал\Desktop\Practice\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.pdb
+C:\Users\Акмарал\Desktop\Practice\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM_ver1.Graph_dzhanyshbekova_akmaral_PI_3_21.resources
