@@ -152,4 +152,8 @@ Public Class Form1
         TextBox7.Text = ""
         TextBox8.Text = ""
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Graph_dzhanyshbekova_akmaral_PI_3_21.Show()
+    End Sub
 End Class
