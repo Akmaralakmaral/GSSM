@@ -44,13 +44,13 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -196,11 +196,11 @@ Partial Class Form1
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label11.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Label11.Location = New System.Drawing.Point(302, -16)
+        Me.Label11.Location = New System.Drawing.Point(246, 2)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(231, 25)
+        Me.Label11.Size = New System.Drawing.Size(339, 25)
         Me.Label11.TabIndex = 5
-        Me.Label11.Text = "Even Search Method"
+        Me.Label11.Text = "Golden Section Search Method"
         '
         'Label1
         '
@@ -250,12 +250,28 @@ Partial Class Form1
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.TextBox8)
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Location = New System.Drawing.Point(388, 30)
+        Me.GroupBox2.Location = New System.Drawing.Point(391, 69)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(350, 436)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Output Data"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(9, 211)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(48, 13)
+        Me.Label13.TabIndex = 19
+        Me.Label13.Text = "abs(b-a):"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(8, 291)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(307, 20)
+        Me.TextBox9.TabIndex = 18
         '
         'Label6
         '
@@ -291,7 +307,7 @@ Partial Class Form1
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 30)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 69)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(345, 436)
         Me.GroupBox1.TabIndex = 3
@@ -314,27 +330,11 @@ Partial Class Form1
         Me.Label12.TabIndex = 13
         Me.Label12.Text = "RightEndPoint(b):"
         '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(8, 291)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(307, 20)
-        Me.TextBox9.TabIndex = 18
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(9, 211)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(48, 13)
-        Me.Label13.TabIndex = 19
-        Me.Label13.Text = "abs(b-a):"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(839, 499)
+        Me.ClientSize = New System.Drawing.Size(845, 590)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
