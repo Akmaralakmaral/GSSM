@@ -17,18 +17,18 @@ Public Class Form1
     End Function
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
-            Dim a As Double = Double.Parse(TextBox1.Text)
-            Dim b As Double = Double.Parse(TextBox2.Text)
-            Dim tol As Double = Double.Parse(TextBox3.Text)
+            Dim a As Decimal = Decimal.Parse(TextBox1.Text)
+            Dim b As Decimal = Decimal.Parse(TextBox2.Text)
+            Dim tol As Decimal = Decimal.Parse(TextBox3.Text)
             Dim k_max As Integer = Integer.Parse(TextBox4.Text)
             Dim cond As Integer = 0
 
 
-            Dim r As Double = (Math.Sqrt(5) - 1) / 2
-            Dim x1 As Double = a + (1 - r) * (b - a)
-            Dim f1 As Double = CalculateFunction(x1)
-            Dim x2 As Double = a + r * (b - a)
-            Dim f2 As Double = CalculateFunction(x2)
+            Dim r As Decimal = (Math.Sqrt(5) - 1) / 2
+            Dim x1 As Decimal = a + (1 - r) * (b - a)
+            Dim f1 As Decimal = CalculateFunction(x1)
+            Dim x2 As Decimal = a + r * (b - a)
+            Dim f2 As Decimal = CalculateFunction(x2)
             Dim k As Integer = 0
 
 
@@ -63,7 +63,7 @@ Public Class Form1
                         End While
                         cond = 2
                     End While
-                    Dim minimumValue As Double = Math.Abs(b - a)
+                    Dim minimumValue As Decimal = Math.Abs(b - a)
                     TextBox5.Text = x2.ToString()
                     TextBox6.Text = f2.ToString()
                     TextBox7.Text = k.ToString()
@@ -117,7 +117,7 @@ Public Class Form1
                         End While
                         cond = 2
                     End While
-                    Dim minimumValue As Double = Math.Abs(b - a)
+                    Dim minimumValue As Decimal = Math.Abs(b - a)
                     TextBox5.Text = x2.ToString()
                     TextBox6.Text = f2.ToString()
                     TextBox7.Text = k.ToString()
@@ -136,7 +136,7 @@ Public Class Form1
             End Try
             stopwatch.Stop()
             Dim elapsedSecondsMax As Double = stopwatch.Elapsed.TotalSeconds
-            TextBox8.Text = elapsedSecondsMax.ToString()
+            TextBox9.Text = elapsedSecondsMax.ToString()
             stopwatch.Reset()
 
         Catch ex As Exception
