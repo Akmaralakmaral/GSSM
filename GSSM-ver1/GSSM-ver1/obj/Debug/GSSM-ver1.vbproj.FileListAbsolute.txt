@@ -26,3 +26,17 @@ C:\Users\Акмарал\Desktop\Practice\GSSM1\GSSM\GSSM-ver1\GSSM-ver1\obj\Debu
 C:\Users\Акмарал\Desktop\Practice\GSSM1\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.exe
 C:\Users\Акмарал\Desktop\Practice\GSSM1\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.xml
 C:\Users\Акмарал\Desktop\Practice\GSSM1\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.pdb
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\bin\Debug\GSSM-ver1.exe.config
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\bin\Debug\GSSM-ver1.exe
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\bin\Debug\GSSM-ver1.pdb
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\bin\Debug\GSSM-ver1.xml
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.vbproj.AssemblyReference.cache
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM_ver1.Form1.resources
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM_ver1.Graph_dzhanyshbekova_akmaral_PI_3_21.resources
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM_ver1.Resources.resources
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.vbproj.GenerateResource.cache
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.vbproj.CoreCompileInputs.cache
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.exe
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.xml
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.pdb
