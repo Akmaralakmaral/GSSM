@@ -40,3 +40,5 @@ C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debu
 C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.exe
 C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.xml
 C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.pdb
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\bin\Debug\aziretParser.pdb
+C:\Users\Акмарал\Desktop\Practice\GSSM3\GSSM\GSSM-ver1\GSSM-ver1\obj\Debug\GSSM-ver1.vbproj.CopyComplete
