@@ -73,7 +73,6 @@ Public Class GSSM_module
                 If (RadioButton1.Checked) Then   'минимум 
                     stopwatch.Start()
 
-
                     While Math.Abs(b - a) > Tolerance And k < k_max
                         If f1 > f2 Then
                             a = x1
@@ -98,51 +97,26 @@ Public Class GSSM_module
 
                     Fx1 = Fd(x1 - Tolerance, H)
                     Fx2 = Fd(x1 + Tolerance, H)
-                    'If cond = 1 Then
 
-                    '    If Sign(YF1 - f1) = Sign(YF1 - f2) Then
-                    '        cond = 0
-                    '        TextBox1.ForeColor = System.Drawing.Color.Green
-                    '        TextBox1.Text = "Результат x* минимайзером этой функции, потому что" & vbCrLf &
-                    '                "Знак [F(x*)-F(x*–Tolerance)]  = " & Sign(YF1 - f1) & vbCrLf &
-                    '                "и " & vbCrLf &
-                    '                "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(YF1 - f2) & vbCrLf &
-                    '                "имеют одинаковые (минусовые) знаки" & vbCrLf &
-                    '                "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
-                    '                "Это равно заданному Tolerance!"
+                    If ValueOfFunction <= Fx1 And ValueOfFunction <= Fx2 Then
+                        TextBox1.ForeColor = System.Drawing.Color.Green
+                        TextBox1.Text = "Результат x* минимайзером этой функции, потому что" & vbCrLf &
+                                            "Знак [F(x*)—F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                            "и " & vbCrLf &
+                                            "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                            "имеют одинаковые (минусовые) знаки" & vbCrLf &
+                                            "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
+                                            "Это равно заданному Tolerance!"
+                    Else
+                        TextBox1.ForeColor = System.Drawing.Color.Red
+                        TextBox1.Text = "Результат x* не является минимайзером этой функции, потому что" & vbCrLf &
+                                            "Знак [F(x*)-F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                            "и " & vbCrLf &
+                                            "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                            "имеют разные знаки"
+                        MsgBox(" Вы должны увеличить Limit of iteration! Эта функция не нашла минимум при заданном количестве итераций")
+                    End If
 
-                    '    Else
-                    '        MessageBox.Show("Задайте начальную точку X(0), так чтобы она была меньше от оптимальной точки (экстремума), для этого нажмите на кнопку Show Function Graph, чтобы увидеть график",
-                    '                        "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    '        x1 = 0
-                    '        YF1 = 0
-                    '        k = 0
-                    '        f1 = 0
-                    '        f2 = 0
-                    '        elapsedSeconds = 0
-                    '        TextBox1.Text = ""
-                    '    End If
-                    'Else
-
-                    '    If YF1 <= f1 And YF1 <= f2 Then
-                    '        TextBox1.ForeColor = System.Drawing.Color.Green
-                    '        TextBox1.Text = "Результат x* минимайзером этой функции, потому что" & vbCrLf &
-                    '                        "Знак [F(x*)—F(x*–Tolerance)]  = " & Sign(YF1 - f1) & vbCrLf &
-                    '                        "и " & vbCrLf &
-                    '                        "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(YF1 - f2) & vbCrLf &
-                    '                        "имеют одинаковые (минусовые) знаки" & vbCrLf &
-                    '                        "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
-                    '                        "Это равно заданному Tolerance!"
-                    '    Else
-                    '        TextBox1.ForeColor = System.Drawing.Color.Red
-                    '        TextBox1.Text = "Результат x* не является минимайзером этой функции, потому что" & vbCrLf &
-                    '                        "Знак [F(x*)-F(x*–Tolerance)]  = " & Sign(YF1 - f1) & vbCrLf &
-                    '                        "и " & vbCrLf &
-                    '                        "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(YF1 - f2) & vbCrLf &
-                    '                        "имеют разные знаки"
-                    '        MsgBox(" Вы должны увеличить Limit of iteration! Эта функция не нашла минимум при заданном количестве итераций")
-                    '    End If
-                    'End If
                 ElseIf (RadioButton2.Checked) Then 'максимум
                     stopwatch.Start()
 
@@ -169,51 +143,25 @@ Public Class GSSM_module
 
                     Fx1 = Fd(x1 - Tolerance, H)
                     Fx2 = Fd(x1 + Tolerance, H)
+                    If Sign(ValueOfFunction - Fx1) = Sign(ValueOfFunction - Fx2) Then
+                        TextBox1.ForeColor = System.Drawing.Color.Green
+                        TextBox1.Text = "Результат x* максимайзером этой функции, потому что" & vbCrLf &
+                                        "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                        "и " & vbCrLf &
+                                        "Знак [F(x*) — F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                        "имеют одинаковые (плюсовые) знаки" & vbCrLf &
+                                        "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
+                                        "Это равно заданному Tolerance!"
+                    Else
+                        TextBox1.ForeColor = System.Drawing.Color.Red
+                        TextBox1.Text = "Результат x * не является максимайзером этой функции, потому что " & vbCrLf &
+                                        "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                        "и" & vbCrLf &
+                                        "Знак[F(x*) — F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                        "имеют разные знаки"
+                        MsgBox("Эта функция не нашла максимум при заданном количестве итераций, вы должны увеличить Limit of iteration!")
+                    End If
 
-                    'If cond = 1 Then
-
-                    '    If Sign(YF1 - f1) = Sign(YF1 - f2) Then
-                    '        cond = 0
-                    '        TextBox1.ForeColor = System.Drawing.Color.Green
-                    '        TextBox1.Text = "Результат x* максимайзером этой функции, потому что" & vbCrLf &
-                    '                "Знак [F(x*)-F(x*–Tolerance)]  = " & Sign(YF1 - f1) & vbCrLf &
-                    '                "и" & vbCrLf &
-                    '                "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(YF1 - f2) & vbCrLf &
-                    '                "имеют одинаковые (плюсовые) знаки" & vbCrLf &
-                    '                "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
-                    '                "Это равно заданному Tolerance!"
-
-                    '    Else
-                    '        MessageBox.Show("Задайте начальную точку X(0), так чтобы она была меньше от оптимальной точки (экстремума), для этого нажмите на кнопку Show Function Graph, чтобы увидеть график",
-                    '                        "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                    '        x1 = 0
-                    '        YF1 = 0
-                    '        k = 0
-                    '        f1 = 0
-                    '        f2 = 0
-                    '        elapsedSeconds = 0
-                    '        TextBox1.Text = ""
-                    '    End If
-                    'Else
-                    '    If Sign(YF1 - f1) = Sign(YF1 - f2) Then
-                    '        TextBox1.ForeColor = System.Drawing.Color.Green
-                    '        TextBox1.Text = "Результат x* максимайзером этой функции, потому что" & vbCrLf &
-                    '                    "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(YF1 - f1) & vbCrLf &
-                    '                    "и " & vbCrLf &
-                    '                    "Знак [F(x*) — F(x*+Tolerance)]  = " & Sign(YF1 - f2) & vbCrLf &
-                    '                    "имеют одинаковые (плюсовые) знаки" & vbCrLf &
-                    '                    "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
-                    '                    "Это равно заданному Tolerance!"
-                    '    Else
-                    '        TextBox1.ForeColor = System.Drawing.Color.Red
-                    '        TextBox1.Text = "Результат x * не является максимайзером этой функции, потому что " & vbCrLf &
-                    '                    "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(YF1 - f1) & vbCrLf &
-                    '                    "и" & vbCrLf &
-                    '                    "Знак[F(x*) — F(x*+Tolerance)]  = " & Sign(YF1 - f2) & vbCrLf &
-                    '                    "имеют разные знаки"
-                    '        MsgBox("Эта функция не нашла максимум при заданном количестве итераций, вы должны увеличить Limit of iteration!")
-                    '    End If
-                    'End If
                 Else
                     MessageBox.Show("Выберите какой экстремум функции вы хотите найти")
                 End If
@@ -225,31 +173,24 @@ Public Class GSSM_module
         End Try
         stopwatch.Stop()
         elapsedSeconds = stopwatch.Elapsed.TotalSeconds
+        FinalInaccuracy = Math.Abs(b - a)
     End Sub
 
     Public Sub output(Fplus2 As TextBox, Fminus2 As TextBox, xResultBox As TextBox, funcResultBox As TextBox, NumberOfIterationsBox As TextBox,
-                      TimeBox As TextBox, xminusBox As TextBox, xplusBox As TextBox, TextBox1 As TextBox)
-        If cond = 1 Then
-            xResultBox.Text = ""
-            funcResultBox.Text = ""
-            NumberOfIterationsBox.Text = ""
-            xminusBox.Text = ""
-            xplusBox.Text = ""
-            Fplus2.Text = ""
-            Fminus2.Text = ""
-            TimeBox.Text = ""
-            stopwatch.Reset()
-        Else
-            xResultBox.Text = SolutionOfTask.ToString("N28")
-            xResultBox.ForeColor = System.Drawing.Color.Red
-            funcResultBox.Text = ValueOfFunction.ToString("N28")
-            NumberOfIterationsBox.Text = k
-            xminusBox.Text = Fx1.ToString("0.0e0")
-            xplusBox.Text = Fx2.ToString("0.0e0")
-            Fplus2.Text = (ValueOfFunction - Fx2).ToString("0.0e0")
-            Fminus2.Text = (ValueOfFunction - Fx1).ToString("0.0e0")
-            TimeBox.Text = elapsedSeconds.ToString
-            stopwatch.Reset()
-        End If
+                      TimeBox As TextBox, xminusBox As TextBox, xplusBox As TextBox, TextBox1 As TextBox, a_b As TextBox)
+
+        xResultBox.Text = SolutionOfTask.ToString("N28")
+        xResultBox.ForeColor = System.Drawing.Color.Red
+        funcResultBox.Text = ValueOfFunction.ToString("N28")
+        NumberOfIterationsBox.Text = k
+        xminusBox.Text = Fx1.ToString("0.0e0")
+        xplusBox.Text = Fx2.ToString("0.0e0")
+        Fplus2.Text = (ValueOfFunction - Fx2).ToString("0.0e0")
+        Fminus2.Text = (ValueOfFunction - Fx1).ToString("0.0e0")
+        TimeBox.Text = elapsedSeconds.ToString
+        a_b.Text = FinalInaccuracy
+        stopwatch.Reset()
+
+
     End Sub
 End Class
