@@ -23,7 +23,9 @@ Public Class Form1
                   TextBox4, TextBox14, TextBox13, RadioButton1,
                   RadioButton2, TextBox10)
 
-                GSSM.output(TextBox11, TextBox12, TextBox5, TextBox6, TextBox7, TextBox9, TextBox14, TextBox13, TextBox10, TextBox8)
+                GSSM.output(TextBox11, TextBox12, TextBox5, TextBox6,
+                            TextBox7, TextBox9, TextBox14, TextBox13,
+                            TextBox10, TextBox8)
             End If
         Catch ef As FormatException
             MsgBox("Ошибка в формате входных данных")

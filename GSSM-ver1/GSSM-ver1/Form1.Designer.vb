@@ -70,6 +70,7 @@ Partial Class Form1
         '
         Me.TextBox6.Location = New System.Drawing.Point(96, 43)
         Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ReadOnly = True
         Me.TextBox6.Size = New System.Drawing.Size(231, 20)
         Me.TextBox6.TabIndex = 13
         '
@@ -115,6 +116,7 @@ Partial Class Form1
         '
         Me.TextBox7.Location = New System.Drawing.Point(255, 119)
         Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(72, 20)
         Me.TextBox7.TabIndex = 11
         '
@@ -122,6 +124,7 @@ Partial Class Form1
         '
         Me.TextBox8.Location = New System.Drawing.Point(96, 70)
         Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ReadOnly = True
         Me.TextBox8.Size = New System.Drawing.Size(231, 20)
         Me.TextBox8.TabIndex = 9
         '
@@ -181,6 +184,7 @@ Partial Class Form1
         '
         Me.TextBox5.Location = New System.Drawing.Point(96, 17)
         Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ReadOnly = True
         Me.TextBox5.Size = New System.Drawing.Size(231, 20)
         Me.TextBox5.TabIndex = 15
         '
@@ -197,6 +201,7 @@ Partial Class Form1
         '
         Me.TextBox9.Location = New System.Drawing.Point(255, 145)
         Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(72, 20)
         Me.TextBox9.TabIndex = 18
         '

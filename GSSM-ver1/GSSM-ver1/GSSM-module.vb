@@ -94,25 +94,26 @@ Public Class GSSM_module
                         End If
                         k += 1
                     End While
+                    stopwatch.Stop()
 
-                    Fx1 = Fd(x1 - Tolerance, H)
-                    Fx2 = Fd(x1 + Tolerance, H)
+                    Fx1 = Fd(SolutionOfTask - Tolerance, H)
+                    Fx2 = Fd(SolutionOfTask + Tolerance, H)
 
                     If ValueOfFunction <= Fx1 And ValueOfFunction <= Fx2 Then
                         TextBox1.ForeColor = System.Drawing.Color.Green
                         TextBox1.Text = "Результат x* минимайзером этой функции, потому что" & vbCrLf &
-                                            "Знак [F(x*)—F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                            "Знак [F(x*)—F(x*–Tolerance)]  = " & Sign(ValueOfFunction - Fx1) & vbCrLf &
                                             "и " & vbCrLf &
-                                            "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                            "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(ValueOfFunction - Fx2) & vbCrLf &
                                             "имеют одинаковые (минусовые) знаки" & vbCrLf &
                                             "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
                                             "Это равно заданному Tolerance!"
                     Else
                         TextBox1.ForeColor = System.Drawing.Color.Red
                         TextBox1.Text = "Результат x* не является минимайзером этой функции, потому что" & vbCrLf &
-                                            "Знак [F(x*)-F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                            "Знак [F(x*)-F(x*–Tolerance)]  = " & Sign(ValueOfFunction - Fx1) & vbCrLf &
                                             "и " & vbCrLf &
-                                            "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                            "Знак [F(x*)-F(x*+Tolerance)]  = " & Sign(ValueOfFunction - Fx2) & vbCrLf &
                                             "имеют разные знаки"
                         MsgBox(" Вы должны увеличить Limit of iteration! Эта функция не нашла минимум при заданном количестве итераций")
                     End If
@@ -140,24 +141,25 @@ Public Class GSSM_module
                         End If
                         k += 1
                     End While
+                    stopwatch.Stop()
 
-                    Fx1 = Fd(x1 - Tolerance, H)
-                    Fx2 = Fd(x1 + Tolerance, H)
+                    Fx1 = Fd(SolutionOfTask - Tolerance, H)
+                    Fx2 = Fd(SolutionOfTask + Tolerance, H)
                     If Sign(ValueOfFunction - Fx1) = Sign(ValueOfFunction - Fx2) Then
                         TextBox1.ForeColor = System.Drawing.Color.Green
                         TextBox1.Text = "Результат x* максимайзером этой функции, потому что" & vbCrLf &
-                                        "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                        "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(ValueOfFunction - Fx1) & vbCrLf &
                                         "и " & vbCrLf &
-                                        "Знак [F(x*) — F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                        "Знак [F(x*) — F(x*+Tolerance)]  = " & Sign(ValueOfFunction - Fx2) & vbCrLf &
                                         "имеют одинаковые (плюсовые) знаки" & vbCrLf &
                                         "Он был найден с ошибкой H = " & ToleranceBox.Text & vbCrLf &
                                         "Это равно заданному Tolerance!"
                     Else
                         TextBox1.ForeColor = System.Drawing.Color.Red
                         TextBox1.Text = "Результат x * не является максимайзером этой функции, потому что " & vbCrLf &
-                                        "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(ValueOfFunction - f1) & vbCrLf &
+                                        "Знак [F(x*) — F(x*–Tolerance)]  = " & Sign(ValueOfFunction - Fx1) & vbCrLf &
                                         "и" & vbCrLf &
-                                        "Знак[F(x*) — F(x*+Tolerance)]  = " & Sign(ValueOfFunction - f2) & vbCrLf &
+                                        "Знак[F(x*) — F(x*+Tolerance)]  = " & Sign(ValueOfFunction - Fx2) & vbCrLf &
                                         "имеют разные знаки"
                         MsgBox("Эта функция не нашла максимум при заданном количестве итераций, вы должны увеличить Limit of iteration!")
                     End If
@@ -171,7 +173,7 @@ Public Class GSSM_module
         Catch ex As Exception
             MessageBox.Show("Ошибка ввода данных. Убедитесь, что все поля заполнены корректно.")
         End Try
-        stopwatch.Stop()
+
         elapsedSeconds = stopwatch.Elapsed.TotalSeconds
         FinalInaccuracy = Math.Abs(b - a)
     End Sub
